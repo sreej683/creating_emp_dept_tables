@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Equi_joins</h1>
+        <table border="3px">
+            <tr>
+                <th>empno</th>
+                <th>ename</th>
+                <th>sal</th>
+                <th>hiredate</th>
+                <th>comm</th>
+                <th>mgr</th>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>dloc</th>
+            </tr>
+            {% for emo in ledo %}
+            <tr>
+                <td>{{emo.empno}}</td>
+                <td>{{emo.ename}}</td>
+                <td>{{emo.sal}}</td>
+                <td>{{emo.hiredate}}</td>
+                <td>{{emo.comm}}</td>
+                <td>{{emo.mgr}}</td>
+                <td>{{emo.deptno.deptno}}</td>
+                <td>{{emo.deptno.dname}}</td>
+                <td>{{emo.deptno.dloc}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>

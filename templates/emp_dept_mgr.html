@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1 style="color:orange;">emp_dept_mgr</h1>
+        <table border="3px">
+            <tr>
+                <th>EmployeeName</th>
+                <th>Salary</th>
+                <th>Hiredate</th>
+                <th>DepartmentName</th>
+                <th>ManagerName</th>
+            </tr>
+            {% for e in edm %}
+            <tr>
+                <td>{{e.ename}}</td>
+                <td>{{e.sal}}</td>
+                <td>{{e.hiredate}}</td>
+                <td>{{e.deptno.dname}}</td>
+                <td>{{e.mgr.ename}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
